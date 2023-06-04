@@ -1,0 +1,24 @@
+<canvas id="gra" width="640" height="480" style="border: 1px solid;"></canvas>
+
+<script>
+var ctx = gra.getContext('2d');
+
+setInterval(function() {
+	ctx.clearRect(0, 0, gra.width, gra.height);
+	ctx.beginPath();
+	ctx.moveTo(25, 50);
+	ctx.lineTo(50, 75);
+	ctx.lineTo(75, 100);
+	ctx.lineTo(100, 125);
+	ctx.lineTo(125, 150);
+	ctx.lineTo(150, 175);
+	ctx.lineTo(175, 200);
+	ctx.lineTo(200, 400);
+	ctx.closePath();
+	ctx.lineWidth = 2;
+	ctx.strokeStyle = '#0000d9';
+	ctx.stroke();
+	ctx.fillStyle = "#00d936";
+	ctx.fill();
+}, 1000 / 60);
+</script>

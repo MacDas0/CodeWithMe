@@ -1,0 +1,16 @@
+<canvas id="gra" width="640" height="480" style="border: 1px solid;"></canvas> 
+<script>
+var ctx = gra.getContext('2d');
+setInterval(function() {
+	ctx.clearRect(0, 0, gra.width, gra.height);
+	ctx.beginPath();
+	ctx.arc(100, 100, 50, 0, 2 * Math.PI, false);
+	ctx.fillStyle = 'green';
+	ctx.lineWidth = 5;
+	ctx.strokeStyle = '#003300';
+	ctx.stroke();
+	ctx.fill();
+	//ctx.cclosePath();
+	
+}, 1000 / 60);
+</script>
