@@ -1,0 +1,11 @@
+<script>
+var klawicz = 0;
+
+setInterval(function() {
+	console.log('Wciśnięto klawisz: ' + klawisz);
+}, 1000 / 60);
+
+window.addEventListener("keydown", function(e) {
+	klawisz = e.key;
+});
+</script>

@@ -1,0 +1,12 @@
+<canvas id="gra" width="1366" height="768" style="border: 1px solid;"></canvas>
+
+<script>
+var ctx = gra.getContext("2d");
+var door_spr = new Image;
+	door_spr.src = "door.png";
+
+setInterval(function(){
+	ctx.clearRect(0, 0, window.screen.width, window.screen.height);
+	ctx.drawImage(door_spr, 150, 0, 150, door_spr.height * (150 / door_spr.width));
+}, 1000 / 60);
+</script>

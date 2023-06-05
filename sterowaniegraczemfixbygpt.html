@@ -1,0 +1,32 @@
+<canvas id="gra" width="640" height="480" style="border: 1px solid;"></canvas>
+
+<script>
+var gra = document.getElementById("gra");
+var ctx = gra.getContext("2d");
+var img = new Image();
+img.src = "gracz.png";
+var klawisz = 0;
+var player = {
+  x: 20,
+  y: 20
+};
+
+img.addEventListener("load", function() {
+  setInterval(function() {
+    ctx.clearRect(0, 0, gra.width, gra.height); // Clear the canvas
+
+    ctx.drawImage(img, player.x, player.y);
+
+    if (klawisz == "w") player.y--;
+    if (klawisz == "d") player.x++;
+    if (klawisz == "a") player.x--;
+    if (klawisz == "s") player.y++;
+
+    klawisz = "";
+  }, 1000 / 60);
+});
+
+window.addEventListener("keydown", function(e) {
+  klawisz = e.key;
+});
+</script>
