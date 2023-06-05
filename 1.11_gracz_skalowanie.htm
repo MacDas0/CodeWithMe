@@ -1,12 +1,10 @@
 <canvas id="gra" width="640" height="480" style="border: 1px solid;"></canvas>
-
 <script>
 var ctx = gra.getContext("2d");
 var img = new Image;
 	img.src = "gracz.png";
-
 setInterval(function() {
 	ctx.clearRect(0, 0, gra.width, gra.height);
-	ctx.drawImage(img, 20, 20);
+	ctx.drawImage(img, 20, 20, 300, 100);
 }, 1000 / 60);
 </script>
